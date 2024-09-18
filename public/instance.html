@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+    <title>Node.js Interaction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      #output {
+        margin-top: 20px;
+        font-size: 14px;
+        color: green;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Interagir com Node.js</h1>
+    
+ 
+   
+    <button onclick="connection()">Conectar</button>
+    <button onclick="logout()">Logout</button>
+    <button onclick="sendMassMessages()">
+      Enviar Mensagens em Massa
+    </button>
+
+    <form action="/upload-contatos" method="POST" enctype="multipart/form-data">
+      <label for="contatos">Escolha o arquivo contatos.xlsx:</label>
+      <input
+        type="file"
+        id="contatos"
+        name="contatos"
+        accept=".xlsx"
+        required
+      />
+      <button type="submit">Enviar</button>
+    </form>
+
+
+<input type="text" id="inputId" placeholder="Digite um valor">
+<input type="text" id="token" placeholder="Digite um valor">
+
+    <div id="output"></div>
+    <div id="resultado"></div>
+
+    <div id="resultad"></div>
+    <canvas id="qrcode"></canvas>
+
+   
+
+
+
+    <script src="./config.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
